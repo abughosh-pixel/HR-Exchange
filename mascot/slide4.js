@@ -22,4 +22,8 @@
   function choose(i) { current = (i + sessions.length) % sessions.length; const [title, facilitator, pose, dir] = sessions[current]; const motion = {left:['-17px','3px','-8deg'],right:['17px','3px','8deg'],up:['0px','-16px','0deg'],down:['0px','16px','0deg']}[dir]; mascot.dataset.pose = pose; mascot.style.setProperty('--x', motion[0]); mascot.style.setProperty('--y', motion[1]); mascot.style.setProperty('--tilt', motion[2]); focus.dataset.dir = dir; gaze.dataset.dir = dir; focus.innerHTML = `<small>Learning Bite ${String(current + 1).padStart(2,'0')}</small><strong>${title}</strong><span>Facilitator: ${facilitator}</span>`; ghost.textContent = String(current + 1).padStart(2,'0'); focus.classList.remove('run'); void focus.offsetWidth; focus.classList.add('run'); [...dots.children].forEach((dot, n) => dot.setAttribute('aria-pressed', String(n === current))); }
   sessions.forEach((_, i) => { const dot = document.createElement('button'); dot.className = 'mascot-dot'; dot.type = 'button'; dot.setAttribute('aria-label', `Learning Bite ${i + 1}`); dot.addEventListener('click', () => choose(i)); dots.append(dot); });
   slide.querySelector('#mascotPrevious').addEventListener('click', () => choose(current - 1)); slide.querySelector('#mascotNext').addEventListener('click', () => choose(current + 1)); focus.addEventListener('click', () => choose(current + 1)); choose(0);
+  const deckHeader = document.querySelector('#top');
+  const refreshHeader = () => { deckHeader.style.display = slide.classList.contains('active') ? 'none' : ''; };
+  new MutationObserver(refreshHeader).observe(slide, { attributes: true, attributeFilter: ['class'] });
+  refreshHeader();
 })();
