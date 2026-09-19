@@ -12,18 +12,6 @@
 .header-copy{display:none}.gaze{display:none!important}
 /* Individual topic spacing: keep every title clear of the mascot. */
 .focus[data-topic="3"],.focus[data-topic="7"]{top:-5%}
-@media(max-width:760px){.focus[data-topic="3"],.focus[data-topic="7"]{top:15%!important}}
-@media(max-width:760px){
-  /* The parent deck navigation is fixed at the top on phones. Reserve that
-     area and show the active topic as the page’s main content. */
-  .page{min-height:100dvh;padding:132px 1rem 1rem;overflow:hidden}
-  .page header,.page .intro{display:none}
-  .stage{height:500px;min-height:0}
-  .focus[data-dir="up"]{top:2%}
-  .focus[data-topic="3"],.focus[data-topic="7"]{top:2%!important}
-  .mascot-wrap{top:53%}
-  .controls{margin-top:0}
-}
 .mascot-wrap[data-topic="4"]{top:44%}
 .focus[data-topic="4"]{bottom:-4%}
 .mascot-wrap[data-topic="8"]{top:43%}
