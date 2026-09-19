@@ -9,8 +9,8 @@
   document.head.insertAdjacentHTML('beforeend', `<style>
     .mascot-slide.mascot-bites-slide{padding:0!important;overflow:hidden!important;background:#f7f4ed!important}
     .mascot-bites-slide iframe{display:block;width:100%;height:100dvh;border:0;background:#f7f4ed}
-    .mascot-deck-nav{left:18px!important;right:auto!important;bottom:18px!important}
-    @media(max-width:760px){.mascot-deck-nav{left:10px!important;bottom:10px!important}}
+    .mascot-deck-nav{top:18px!important;right:18px!important;bottom:auto!important;left:auto!important}
+    @media(max-width:760px){.mascot-deck-nav{top:10px!important;right:10px!important}}
   </style>`);
 
   const top = document.querySelector('#top');
