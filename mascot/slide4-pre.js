@@ -4,7 +4,7 @@
 
   slide.dataset.title = 'HR Exchange Topics';
   slide.classList.add('mascot-bites-slide');
-  slide.innerHTML = '<iframe src="../mascot-topics/?v=cb0ea3" title="HR Exchange Topics"></iframe><div id="topicGrid" hidden></div>';
+  slide.innerHTML = '<iframe src="../mascot-topics/?v=topicfix1" title="HR Exchange Topics"></iframe><div id="topicGrid" hidden></div>';
 
   document.head.insertAdjacentHTML('beforeend', `<style>
     .mascot-slide.mascot-bites-slide{padding:0!important;overflow:hidden!important;background:#f7f4ed!important}
