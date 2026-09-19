@@ -1,0 +1,13 @@
+/* These adjustments apply only to phones. Desktop styling is unchanged. */
+@media (max-width: 480px) {
+  .slide.hero { padding: 84px 6vw 70px; }
+  .hero-grid { gap: 14px; }
+  .hero .display { font-size: clamp(46px, 13vw, 54px); line-height: .9; margin: 8px 0 12px; }
+  .hero .copy { font-size: 16px; line-height: 1.35; margin: 0 0 14px; }
+  .action { padding: 12px 18px; }
+  .poster { width: min(82vw, 340px); height: 230px; margin: 4px auto 0; border-radius: 30px; }
+  .tiny { top: 24px; left: 25px; font-size: 8px; }
+  .poster-title { left: 25px; bottom: 28px; font-size: 56px; }
+  .round { width: 92px; height: 92px; right: -10px; bottom: 13px; padding: 9px; font-size: 7px; }
+  .round b { font-size: 20px; }
+}
