@@ -63,6 +63,28 @@ button:focus-visible{outline:3px solid #39998c;outline-offset:4px}
 /* Session preview: small adaptations on the original HR Exchange deck. */
 .session .slide>.wrap{transform:translateY(-24px)}
 .session .slide.hero>.top .meta{visibility:hidden}
+.session .slide[data-title="The role"]>.wrap,
+.session .slide[data-title="Your turn"]>.wrap{transform:translateY(-6px)}
+.session #roleGrid .topic:nth-child(1),
+.session #roleGrid .topic:nth-child(4),
+.session #caseGrid .topic:nth-child(2){background:var(--n);border-color:var(--n);color:#fff;box-shadow:0 18px 38px rgba(20,34,75,.14)}
+.session #roleGrid .topic:nth-child(1) b,
+.session #roleGrid .topic:nth-child(4) b,
+.session #caseGrid .topic:nth-child(2) b{color:var(--m)}
+.session #roleGrid .topic:nth-child(1) p,
+.session #roleGrid .topic:nth-child(4) p,
+.session #caseGrid .topic:nth-child(2) p{color:rgba(255,255,255,.76)}
+.session #roleGrid .topic:nth-child(1) .open,
+.session #roleGrid .topic:nth-child(4) .open,
+.session #caseGrid .topic:nth-child(2) .open{background:rgba(255,255,255,.13);color:#fff}
+.session #roleGrid .topic:nth-child(2),
+.session #roleGrid .topic:nth-child(3),
+.session #caseGrid .topic:nth-child(1),
+.session #caseGrid .topic:nth-child(3){background:#e8f5f1;border-color:#cae5de}
+.session #roleGrid .topic:nth-child(1):hover,
+.session #roleGrid .topic:nth-child(4):hover,
+.session #caseGrid .topic:nth-child(2):hover{background:#1b2d61}
+
 .session .hero-grid{grid-template-columns:minmax(280px,.82fr) minmax(390px,1.18fr)}
 .session .hero .wrap,.session .expect,.session .final-grid{transform:none}
 .session .hero-intro{align-self:center}
@@ -93,7 +115,7 @@ button:focus-visible{outline:3px solid #39998c;outline-offset:4px}
 .session .closing-card p{font-size:19px;line-height:1.55;color:var(--u)}
 .session .closing-card .quote{margin-top:22px;box-shadow:none;background:#f5faf7;font-size:23px}
 .session .nav{box-shadow:0 8px 20px rgba(20,34,75,.05)}
-@media(max-width:850px){.session .slide>.wrap{transform:translateY(-12px)}.session .hero-grid,.session .final-grid,.session .expect{grid-template-columns:1fr}.session .slide{padding-top:30px;padding-bottom:95px}.session .hero-grid{gap:22px}.session .hero .display{font-size:clamp(48px,12vw,75px)}.session .hero-intro{padding:22px}.session .topic-grid.four,.session .topic-grid.three{grid-template-columns:repeat(2,minmax(0,1fr))}.session .topic{min-height:180px}.session .topic h3{margin-top:26px}.session .expect-card{margin-top:0}.session .closing-card{padding:24px}}
+@media(max-width:850px){.session .slide>.wrap{transform:translateY(-12px)}.session .slide[data-title="The role"]>.wrap,.session .slide[data-title="Your turn"]>.wrap{transform:none}.session .hero-grid,.session .final-grid,.session .expect{grid-template-columns:1fr}.session .slide{padding-top:30px;padding-bottom:95px}.session .hero-grid{gap:22px}.session .hero .display{font-size:clamp(48px,12vw,75px)}.session .hero-intro{padding:22px}.session .topic-grid.four,.session .topic-grid.three{grid-template-columns:repeat(2,minmax(0,1fr))}.session .topic{min-height:180px}.session .topic h3{margin-top:26px}.session .expect-card{margin-top:0}.session .closing-card{padding:24px}}
 @media(max-width:520px){.session .slide{padding:25px 6vw 88px}.session .hero .display{font-size:clamp(43px,12vw,60px);white-space:normal}.session .topic-grid.four,.session .topic-grid.three{grid-template-columns:1fr;gap:11px;margin-top:20px}.session .topic,.session .topic-grid.three .topic{min-height:135px;padding:18px}.session .topic h3,.session .topic-grid.three .topic h3{margin:16px 0 7px;font-size:25px}.session .topic p{font-size:13px}.session .stat{min-height:110px}.session .stat b{font-size:38px}.session .expect .display{white-space:normal;font-size:clamp(37px,10vw,48px)}.session .simple-panel{padding:23px}.session .closing-card .display{font-size:44px}}
 </style></head><body class="session"><div class="deck"><header class="top" id="top"><div class="brand"><img src="../assets/fine-logo.png" alt="Fine Hygienic Holding"></div><div class="meta">THE HR EXCHANGE · SESSION 01</div></header><main class="slides" id="slides">
 <section class="slide hero active" data-title="Welcome"><div class="wrap hero-grid"><div><h1 class="display reveal">The True<br>Role of <strong>HR.</strong></h1><button class="action reveal" data-next>Explore the session →</button></div><div class="hero-intro reveal"><p class="copy">A conversation about <strong>what HR contributes to people, leaders and the business</strong>—and how we turn everyday work into meaningful impact.</p><p class="quote">This is a <strong>visual concept.</strong> The examples and discussion prompts will be replaced when the facilitator's content is ready.</p></div></div></section>
