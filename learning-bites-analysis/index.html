@@ -80,7 +80,7 @@
     $('topicGrid').innerHTML=visible.map((t,i)=>{
       const count=t.allocatedAttendance??t.sessionAttendance??t.attendance??'—';
       const includedInAlaa=['AI in Excel','AI in PowerPoint','AI in Leadership'].includes(t.title);
-      const source=includedInAlaa?'Adjusted proportional share · combined total 253':'';
+      const source='';
       return `<article class="catalog-card"><div class="catalog-card-top"><span>${esc(t.month)}</span><span>${esc(t.theme)}</span></div><h3>${esc(t.title)}</h3><div class="catalog-card-bottom"><div><strong>${count}</strong>${source?`<small>${esc(source)}</small>`:''}</div></div></article>`;
     }).join('');
     $('topicFilters').innerHTML=['all',...Object.keys(data.themes)].map(name=>`<button type="button" class="theme-filter ${theme===name?'active':''}" data-theme="${esc(name)}" aria-pressed="${theme===name}">${name==='all'?'All · '+data.topics.length:esc(name)}</button>`).join('');
