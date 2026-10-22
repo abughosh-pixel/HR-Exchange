@@ -122,7 +122,7 @@
     $('topicFilters').querySelectorAll('button').forEach(button=>button.addEventListener('click',()=>renderTopics(data,button.dataset.theme)));
   }
   function renderThemes(data){
-    $('themeGrid').innerHTML=Object.entries(data.themes).map(([name,stats],i)=>`<article class="theme-card"><span class="theme-ordinal">${String(i+1).padStart(2,'0')}</span><h3>${esc(name)}</h3><strong>${stats.attendance.toLocaleString()}</strong><div class="theme-meta"><b>${stats.topics}</b> Learning Bites </div></article>`).join('');
+    $('themeGrid').innerHTML=Object.entries(data.themes).map(([name,stats],i)=>`<article class="theme-card"><span class="theme-ordinal">${String(i+1).padStart(2,'0')}</span><h3>${esc(name)}</h3><strong>${stats.attendance.toLocaleString()}</strong><div class="theme-meta"><b>${stats.topics}</b> Learning Bite${stats.topics===1?'':'s'} </div></article>`).join('');
   }
   function renderClusters(data){
     const top=ordered(data.clusters)[0][1];
